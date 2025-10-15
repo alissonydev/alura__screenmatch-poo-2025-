@@ -13,7 +13,16 @@ public class Principal {
         meuFilme.incluidoNoPlano = true;
         meuFilme.duracaoEmMinutos = 175;
 
-        System.out.println(meuFilme.nome);
-        System.out.println(meuFilme.anoDeLancamento);
+        meuFilme.exibeFichaTecnica();
+        meuFilme.avalia(8);
+        meuFilme.avalia(10);
+        meuFilme.avalia(9.5);
+        System.out.printf("Avaliação média: %.2f%n", meuFilme.getSomaDasAvaliacoes() / meuFilme.getTotalDeAvaliacoes());
+        System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
+        System.out.println(meuFilme.getSomaDasAvaliacoes());
+
+        System.out.println(meuFilme.pegaMedia());
+
+
     }
 }
