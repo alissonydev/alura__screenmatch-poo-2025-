@@ -6,12 +6,11 @@ public class Principal {
     public static void main(String[] args) {
 
         final Filme meuFilme = new Filme();
-        meuFilme.nome = "O poderoso chefão";
-        meuFilme.anoDeLancamento = 1970;
-        meuFilme.genero = "Drama";
-        meuFilme.nota = 9.2;
-        meuFilme.incluidoNoPlano = true;
-        meuFilme.duracaoEmMinutos = 175;
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setGenero("Drama");
+        meuFilme.setIncluidoNoPlano(true);
+        meuFilme.setDuracaoEmMinutos(175);
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(8);
@@ -22,7 +21,5 @@ public class Principal {
         System.out.println(meuFilme.getSomaDasAvaliacoes());
 
         System.out.println(meuFilme.pegaMedia());
-
-
     }
 }
