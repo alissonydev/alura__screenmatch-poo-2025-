@@ -1,4 +1,4 @@
-package com.github.alissonydev.entities.app;
+package com.github.alissonydev.app;
 
 import com.github.alissonydev.entities.Filme;
 
