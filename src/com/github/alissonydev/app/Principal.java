@@ -1,6 +1,7 @@
 package com.github.alissonydev.app;
 
 import com.github.alissonydev.entities.Filme;
+import com.github.alissonydev.entities.Serie;
 
 public class Principal {
     public static void main(String[] args) {
@@ -21,5 +22,14 @@ public class Principal {
         System.out.println(meuFilme.getSomaDasAvaliacoes());
 
         System.out.println(meuFilme.pegaMedia());
+
+        final Serie lost = new Serie();
+        lost.setNome("Lost");
+        lost.setAnoDeLancamento(2000);
+        System.out.println();
+        lost.exibeFichaTecnica();
+        lost.setTemporadas(10);
+        lost.setEpisodiosPorTemporada(10);
+
     }
 }
