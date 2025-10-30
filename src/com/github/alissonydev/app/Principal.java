@@ -2,6 +2,7 @@ package com.github.alissonydev.app;
 
 import com.github.alissonydev.entities.Filme;
 import com.github.alissonydev.entities.Serie;
+import com.github.alissonydev.utils.CalculadoraDeTempo;
 
 public class Principal {
     public static void main(String[] args) {
@@ -33,5 +34,20 @@ public class Principal {
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar: " + lost.getDuracaoEmMinutos());
+
+        CalculadoraDeTempo calculadoraDeTempo = new CalculadoraDeTempo();
+        calculadoraDeTempo.inclui(meuFilme);
+        System.out.println(calculadoraDeTempo.getTempoTotal());
+
+        final Filme outroFilme = new Filme();
+        outroFilme.setNome("Avatar");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setGenero("Ficcao");
+        outroFilme.setIncluidoNoPlano(true);
+        outroFilme.setDuracaoEmMinutos(200);
+
+        calculadoraDeTempo.inclui(outroFilme);
+        calculadoraDeTempo.inclui(lost);
+        System.out.println(calculadoraDeTempo.getTempoTotal());
     }
 }
